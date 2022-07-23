@@ -2,7 +2,7 @@
 while true
     do 
         export DISPLAY=:0.0
-        battery_level=`cat /sys/class/power_supply/BAT1/capacity`
+        battery_level=`cat /sys/class/power_supply/BAT1/capacity`   #change BAT1 to your battery name by command `ls /sys/class/power_supply/`
         battery_status=`cat /sys/class/power_supply/BAT1/status`
         if [ $battery_status = "Charging" ] && [ $battery_level -ge 85 ];
         then
